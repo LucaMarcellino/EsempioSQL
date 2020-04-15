@@ -21,8 +21,12 @@ public class LeggiBabs {
 				String nomeStazione=res.getString("name");
 				System.out.println(nomeStazione);
 			}
+			st.close();// chiudo la prima Statement -- se ce ne solo uno la chiusaura della connessione già lo chiude
+			
+			Statement st2=conn.createStatement();//Posso aprirne una seconda
 			
 			conn.close();
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
