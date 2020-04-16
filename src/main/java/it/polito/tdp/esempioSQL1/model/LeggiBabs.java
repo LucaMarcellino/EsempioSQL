@@ -15,8 +15,8 @@ public class LeggiBabs {
 		try {
 			Connection conn = DriverManager.getConnection(jdbcURL);
 			String SQL="SELECT NAME FROM station WHERE landmark= ? ";
-			
 			PreparedStatement st= conn.prepareStatement(SQL);
+			
 			st.setString(1, "Palo Alto");
 			ResultSet res=st.executeQuery();
 			
